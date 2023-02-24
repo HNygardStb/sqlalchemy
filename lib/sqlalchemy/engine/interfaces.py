@@ -1967,6 +1967,9 @@ class Dialect(EventTarget):
 
         raise NotImplementedError()
 
+    def _do_ping_w_event(self, dbapi_connection: DBAPIConnection) -> bool:
+        raise NotImplementedError()
+
     def do_ping(self, dbapi_connection: DBAPIConnection) -> bool:
         """ping the DBAPI connection and return True if the connection is
         usable."""
